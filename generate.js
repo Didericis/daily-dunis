@@ -171,6 +171,12 @@ var content = Mustache.render(
         padding-left: 2rem;
       }
 
+      .main-image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
       #date {
         position: absolute;
         bottom: 0;
@@ -195,7 +201,7 @@ var content = Mustache.render(
         <span id="date">{{date}}</span>
       </div>
       <article>
-        <div>
+        <div class='main-image-container'>
           <img class='main-image' src="daily_dunis.jpeg" />
         </div>
         <div>
@@ -207,7 +213,7 @@ var content = Mustache.render(
 </html>`, 
   {
     date: (new Date()).toDateString(),
-    content: LoremIpsum.prototype.generate(80),
+    content: LoremIpsum.prototype.generate(60),
     title: HeadlineIpsum.prototype.generate()
   }
 );
