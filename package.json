@@ -1,0 +1,23 @@
+{
+  "name": "daily-dunis",
+  "version": "1.0.0",
+  "description": "Your daily dose of dunis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "node generate.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Didericis/daily-dunis.git"
+  },
+  "author": "Didericis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Didericis/daily-dunis/issues"
+  },
+  "homepage": "https://github.com/Didericis/daily-dunis#readme",
+  "dependencies": {
+    "mustache": "^4.2.0"
+  }
+}

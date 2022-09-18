@@ -3,9 +3,10 @@
   <head>
     <title>Daily Dunis</title>
     <meta name="description" content="Your Daily Dose of Dunis">
-    <meta property="og:title" content="Your Daily Dose of Dunis" />
+    <meta property="og:title" content="Sun Sep 18 2022 - Lake Pauline Cruise Company adds new Kayak" />
     <meta property="og:url" content="https://didericis.github.io/daily-dunis/" />
     <meta property="og:image" content="https://didericis.github.io/daily-dunis/daily_dunis.jpeg" />
+    <meta name="viewport" content="width=device-width">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
@@ -22,31 +23,32 @@
         text-align: center
       }
 
+      h1 {
+        margin: 1.5rem 0;
+      }
+
+      article {
+        display: flex;
+        padding: 1rem 0;
+        flex-direction: row-reverse;
+      }
+
       body {
         font-family: 'Playfair Display', serif;
         display: flex;
         align-items: center;
         justify-content: center;
-      }
-
-      section {
-        padding: 1rem 0;
-      }
-
-      h1 {
-        margin: 1rem;
+        padding: 0 2rem;
       }
 
       main {
         max-width: 800px;
-      }
-
-      body {
-        padding: 0 2rem;
+        position: relative;
       }
 
       .title {
         border-bottom: 1px solid #CCC;
+        position: relative;
       }
 
       .main-image {
@@ -54,17 +56,20 @@
         padding-left: 2rem;
       }
 
-      section {
-        display: flex;
-      }
-
-      .title {
-        position: relative;
-      }
-
       #date {
         position: absolute;
         bottom: 0;
+      }
+  
+      @media only screen and (max-width: 600px) {
+        article {
+          flex-direction: column;
+        }
+
+        .main-image {
+          width: 100%;
+          padding: 0;
+        }
       }
     </style>
   </head>
@@ -72,22 +77,16 @@
     <main>
       <div class="title">
         <h1>The Daily Dunis</h1>
-        <span id="date"></span>
+        <span id="date">Sun Sep 18 2022</span>
       </div>
-      <section>
-        <div>
-          <h3>Tennis Ball Abandoned in Hole</h3>
-          <p>
-          Doggo ipsum yapper heckin good boys and girls heckin angery woofer vvv wow such tempt, big ol pupper borking doggo floofs. Long bois h*ck big ol I am bekom fat fluffer, extremely cuuuuuute long bois. Lotsa pats blop wow such tempt bork the neighborhood pupper pupperino corgo, wow very biscit dat tungg tho puggorino heckin good boys. Very taste wow adorable doggo vvv very taste wow porgo blep, waggy wags doggo aqua doggo wow very biscit. Shooberino heckin good boys borkdrive many pats borkdrive, shoober h*ck very good spot snoot, tungg fat boi heck. Dat tungg tho fluffer long woofer very taste wow, shibe. Heckin good boys smol adorable doggo much ruin diet the neighborhood pupper, maximum borkdrive borking doggo.
-          </p>
-        </div>
+      <article>
         <div>
           <img class='main-image' src="daily_dunis.jpeg" />
         </div>
-      </section>
-
+        <div>
+          <h3 id="title">Lake Pauline Cruise Company adds new Kayak </h3>
+          <p id="content">many pats heckin good boys.  Porgo wrinkler ruff much ruin diet wow such tempt long doggo, pupperino very hand that feed shibe heckin good boys. I am bekom fat wrinkler adorable doggo heckin good boys doggorino doge, I am bekom fat length boy you are doin me a concern heckin good boys, I am bekom fat heckin vvv smol borking doggo with a long snoot for pats. Porgo adorable doggo long bois wow very biscit, most angery pupper I have ever seen. Heckin angery woofer very good spot puggorino long bois long water shoob, you are doing me a frighten very jealous pupper. The neighborhood pupper maximum borkdrive tungg doggo, much ruin diet puggo. What a nice floof heck heckin angery woofer, dat tungg tho. Snoot you are doin me a concern woofer ruff, fat boi pats, puggo very jealous pupper. lotsa pats ur givin me a spook. Heckin good boys and girls puggorino wow such tempt wrinkler smol borking doggo with a long snoot for pats shibe, fat boi snoot stop it fren puggo. Waggy wags length boy stop it fren, waggy wags. Wow such tempt heck long doggo borkf you are doing me a frighten, blop length boy.</p>
+        </div>
+      </article>
   </body>
-  <script>
-    document.getElementById('date').innerText = (new Date()).toDateString();
-  </script>
 </html>
