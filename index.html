@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Daily Dunis</title>
+    <meta name="description" content="Your Daily Dose of Dunis">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <style type="text/css">
+      @font-face {
+        font-family: oldlondon;
+        src: url('old_london/OldLondon.ttf') format('truetype');
+        font-weight: bold;
+      }
+
+      h1, h2 {
+        font-family: "oldlondon";
+        font-size: 50px;
+        text-align: center
+      }
+
+      body {
+        font-family: 'Playfair Display', serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      section {
+        padding: 1rem 0;
+      }
+
+      h1 {
+        margin: 1rem;
+      }
+
+      main {
+        max-width: 800px;
+      }
+
+      body {
+        padding: 0 2rem;
+      }
+
+      .title {
+        border-bottom: 1px solid #CCC;
+      }
+
+      .main-image {
+        width: 200px;
+        padding-left: 2rem;
+      }
+
+      section {
+        display: flex;
+      }
+
+      .title {
+        position: relative;
+      }
+
+      #date {
+        position: absolute;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="title">
+        <h1>The Daily Dunis</h1>
+        <span id="date"></span>
+      </div>
+      <section>
+        <div>
+          <h3>Tennis Ball Abandoned in Hole</h3>
+          <p>
+          Doggo ipsum yapper heckin good boys and girls heckin angery woofer vvv wow such tempt, big ol pupper borking doggo floofs. Long bois h*ck big ol I am bekom fat fluffer, extremely cuuuuuute long bois. Lotsa pats blop wow such tempt bork the neighborhood pupper pupperino corgo, wow very biscit dat tungg tho puggorino heckin good boys. Very taste wow adorable doggo vvv very taste wow porgo blep, waggy wags doggo aqua doggo wow very biscit. Shooberino heckin good boys borkdrive many pats borkdrive, shoober h*ck very good spot snoot, tungg fat boi heck. Dat tungg tho fluffer long woofer very taste wow, shibe. Heckin good boys smol adorable doggo much ruin diet the neighborhood pupper, maximum borkdrive borking doggo.
+          </p>
+        </div>
+        <div>
+          <img class='main-image' src="/daily_dunis.jpeg" />
+        </div>
+      </section>
+
+  </body>
+  <script>
+    document.getElementById('date').innerText = (new Date()).toDateString();
+  </script>
+</html>
