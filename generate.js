@@ -116,7 +116,7 @@ var content = Mustache.render(
 `<!doctype html>
 <html>
   <head>
-    <title>Daily Dunis</title>
+    <title>The Daily Dunis</title>
     <meta name="description" content="Your Daily Dose of Dunis">
     <meta property="og:title" content="{{date}} - {{title}}" />
     <meta property="og:url" content="https://didericis.github.io/daily-dunis/" />
