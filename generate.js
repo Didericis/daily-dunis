@@ -1,8 +1,10 @@
 var Mustache = require('mustache');
 var fs = require('fs');
 
-
 var headline = process.argv[2];
+var isMovie = process.argv[3] == 1;
+var filename = isMovie ? 'daily_dunis.mov' : 'daily_dunis.jpeg';
+
 var HeadlineIpsum = function() {}
 var HEADLINES = [
   'Ball Abandoned in Hole',
@@ -121,7 +123,7 @@ var content = Mustache.render(
     <meta name="description" content="Your Daily Dose of Dunis">
     <meta property="og:title" content="{{date}} - {{title}}" />
     <meta property="og:url" content="https://didericis.github.io/daily-dunis/" />
-    <meta property="og:image" content="https://didericis.github.io/daily-dunis/daily_dunis.jpeg" />
+    <meta property="{{ogproperty}}" content="https://didericis.github.io/daily-dunis/{{filename}}" />
     <meta name="viewport" content="width=device-width">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
@@ -210,7 +212,7 @@ var content = Mustache.render(
       </div>
       <article>
         <div class='main-image-container'>
-          <img class='main-image' src="daily_dunis.jpeg" />
+          {{{mainImage}}}
         </div>
         <div>
           <h3 id="title">{{title}} </h3>
@@ -222,7 +224,12 @@ var content = Mustache.render(
   {
     date: (new Date()).toDateString(),
     content: LoremIpsum.prototype.generate(60),
-    title: headline ? headline : HeadlineIpsum.prototype.generate()
+    title: headline ? headline : HeadlineIpsum.prototype.generate(),
+    ogproperty: isMovie ? 'og:video' : 'og:image',
+    filename,
+    mainImage: isMovie ? 
+      `<video controls autoplay class="main-image"><source src="${filename}"></video>` : 
+      `<img class='main-image' src="${filename}" />`
   }
 );
 
