@@ -2,6 +2,7 @@ var Mustache = require('mustache');
 var fs = require('fs');
 
 
+var headline = process.argv[2];
 var HeadlineIpsum = function() {}
 var HEADLINES = [
   'Ball Abandoned in Hole',
@@ -221,7 +222,7 @@ var content = Mustache.render(
   {
     date: (new Date()).toDateString(),
     content: LoremIpsum.prototype.generate(60),
-    title: HeadlineIpsum.prototype.generate()
+    title: headline ? headline : HeadlineIpsum.prototype.generate()
   }
 );
 
